@@ -11,6 +11,8 @@ import dsa.practice.graph.Dijkstra.ShortestPath;
 
 public class DijkstraTests {
 
+    Dijkstra dijkstra = new Dijkstra();
+
     // Graph:
     //
     //    B---6----E
@@ -35,7 +37,6 @@ public class DijkstraTests {
         graph.addEdge("E", "C", 9);
         graph.addEdge("F", "C", 3);
 
-        Dijkstra dijkstra = new Dijkstra();
         Map<String, ShortestPath> result = dijkstra.findShortestPath(graph, "A");
 
         assertEquals(0, result.get("A").getDistance());
@@ -80,7 +81,6 @@ public class DijkstraTests {
         graph.addEdge("E", "D", 4);
         graph.addEdge("D", "F", 11);
 
-        Dijkstra dijkstra = new Dijkstra();
         Map<String, ShortestPath> result = dijkstra.findShortestPath(graph, "A");
 
         assertEquals(0, result.get("A").getDistance());
@@ -121,7 +121,6 @@ public class DijkstraTests {
         graph.addEdge("C", "E", 5);
         graph.addEdge("E", "F", 2);
 
-        Dijkstra dijkstra = new Dijkstra();
         Map<String, ShortestPath> result = dijkstra.findShortestPath(graph, "A");
 
         assertEquals(0, result.get("A").getDistance());
@@ -166,7 +165,6 @@ public class DijkstraTests {
         graph.addEdge("D", "E", 4);
         // Z is not added at all
 
-        Dijkstra dijkstra = new Dijkstra();
         Map<String, ShortestPath> result = dijkstra.findShortestPath(graph, "A");
 
         assertEquals(0, result.get("A").getDistance());
@@ -205,7 +203,6 @@ public class DijkstraTests {
         graph.addEdge("D", "A", 1);
         graph.addEdge("C", "E", 2);
 
-        Dijkstra dijkstra = new Dijkstra();
         Map<String, ShortestPath> result = dijkstra.findShortestPath(graph, "A");
 
         assertEquals(0, result.get("A").getDistance());

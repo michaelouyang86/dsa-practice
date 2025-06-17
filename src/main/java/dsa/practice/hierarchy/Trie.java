@@ -3,7 +3,7 @@ package dsa.practice.hierarchy;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Tries {
+public class Trie {
 
     private Node root = new Node();
 

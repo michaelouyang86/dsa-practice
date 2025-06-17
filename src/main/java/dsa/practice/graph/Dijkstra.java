@@ -31,18 +31,18 @@ public class Dijkstra {
         priorityQueue.add(new Node(start, 0));
         while (!priorityQueue.isEmpty()) {
             String nodeName = priorityQueue.poll().name;
-            // Skip if the node has already been processed
+            // Skip if the node has already found the shortest path
             if (visited.contains(nodeName)) {
                 continue;
             }
             for (Edge edge : graph.getEdges(nodeName)) {
                 String neighbor = edge.getDestination();
-                int weight = edge.getDistance();
+                int neighborDistance = edge.getDistance();
                 // Skip if the neighbor has already found the shortest path
                 if (visited.contains(neighbor)) {
                     continue;
                 }
-                int newDistance = distances.get(nodeName) + weight;
+                int newDistance = distances.get(nodeName) + neighborDistance;
                 int currentDistance = distances.get(neighbor);
                 if (newDistance < currentDistance) {
                     distances.put(neighbor, newDistance);
