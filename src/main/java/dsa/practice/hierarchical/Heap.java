@@ -1,4 +1,4 @@
-package dsa.practice.hierarchy;
+package dsa.practice.hierarchical;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
