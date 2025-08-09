@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 // https://leetcode.com/problems/course-schedule-ii
-public class CourseSchedule2 {
+public class CourseScheduleII {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         // Create indegree and graph
         int[] indegree = new int[numCourses];
