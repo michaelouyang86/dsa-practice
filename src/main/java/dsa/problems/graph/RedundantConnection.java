@@ -4,7 +4,7 @@ package dsa.problems.graph;
 public class RedundantConnection {
     // Disjoint Set (Union-Find)
     private int[] size;
-    private int[] parent; 
+    private int[] parent;
 
     public int[] findRedundantConnection(int[][] edges) {
         size = new int[edges.length + 1];

@@ -10,6 +10,7 @@ import java.util.Set;
 
 // https://leetcode.com/problems/redundant-connection
 public class RedundantConnectionOriginal {
+    // DFS with Parent Tracking
     public int[] findRedundantConnection(int[][] edges) {
         Graph graph = new Graph();
         for (int[] edge : edges) {

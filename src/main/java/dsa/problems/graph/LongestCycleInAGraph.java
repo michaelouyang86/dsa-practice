@@ -10,7 +10,7 @@ import java.util.Set;
 
 // https://leetcode.com/problems/longest-cycle-in-a-graph
 public class LongestCycleInAGraph {
-
+    // DFS with Recursion Stack (DFS with on-path tracking)
     private int longestCycle = -1;
     private Map<Integer, Integer> depthMap = new HashMap<>();
 
